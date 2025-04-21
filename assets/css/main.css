@@ -152,7 +152,7 @@ body {
 
 /* Add gap between nav and content */
 #top {
-  margin-top: 5em; /* Space for fixed navbar plus gap */
+  margin-top: 3em; /* Space for fixed navbar plus gap */
   padding-top: 2em;
 }
 
