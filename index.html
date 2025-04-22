@@ -222,37 +222,38 @@
     </article>
 
 <script>
-        // Wait for the DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get the toggle button and navigation menu
-            const navToggle = document.querySelector('.nav-toggle');
-            const navMenu = document.getElementById('nav');
-            
-            // Toggle navigation menu when button is clicked
-            if (navToggle) {
-                navToggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    navMenu.classList.toggle('show');
-                    console.log('Toggle clicked - menu is now:', navMenu.classList.contains('show') ? 'shown' : 'hidden');
-                });
-            } else {
-                console.error('Navigation toggle button not found');
-            }
-            
-            // Close menu when clicking elsewhere on the page
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('#nav') && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                }
-            });
-            
-            // Handle window resize
-            window.addEventListener('resize', function() {
-                if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
-                    navMenu.classList.remove('show');
-                }
-            });
+// Updated JavaScript for your navigation toggle
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the toggle button and navigation menu's UL element
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('#nav ul.container');
+    
+    // Toggle navigation menu when button is clicked
+    if (navToggle) {
+        navToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            navMenu.classList.toggle('show');
+            console.log('Toggle clicked - menu is now:', navMenu.classList.contains('show') ? 'shown' : 'hidden');
         });
+    } else {
+        console.error('Navigation toggle button not found');
+    }
+    
+    // Close menu when clicking elsewhere on the page
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('#nav') && navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+        }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
+            navMenu.classList.remove('show');
+        }
+    });
+});
     </script>
 
 </body>  

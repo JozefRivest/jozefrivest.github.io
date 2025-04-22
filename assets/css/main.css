@@ -161,12 +161,11 @@ body {
   }
 
   #nav {
-    height: auto;
-    text-align: left;
+    height: 3.5em; /* Keep initial height for the nav bar itself */
   }
 
-  #nav ul {
-    display: none;
+  #nav ul.container {
+    display: none; /* Hide by default on mobile */
     flex-direction: column;
     width: 100%;
     padding: 3.5em 0 1em;
@@ -176,9 +175,8 @@ body {
     left: 0;
   }
 
-  /* This is the critical selector that needs to match your HTML */
-  #nav ul.show,
-  #nav #nav-menu.show {
+  /* This is the fixed selector that matches your HTML structure */
+  #nav ul.container.show {
     display: flex !important;
   }
 
@@ -199,6 +197,7 @@ body {
   #nav a.active:before {
     display: none;
   }
+}
 }
 
 /* Add gap between nav and content */
