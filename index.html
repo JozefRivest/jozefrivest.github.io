@@ -220,35 +220,39 @@
       </div>
     </article>
 
-</body>
-  
-<!-- JavaScript for toggle functionality -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    
-    // Toggle navigation menu when button is clicked
-    navToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('show');
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const isClickInsideNav = navToggle.contains(event.target) || 
-                               navMenu.contains(event.target);
-      
-      if (!isClickInsideNav && navMenu.classList.contains('show')) {
-        navMenu.classList.remove('show');
-      }
-    });
-    
-    // Handle window resize
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
-        navMenu.classList.remove('show');
-      }
-    });
-  });
-</script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the toggle button and navigation menu
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.getElementById('nav-menu');
+            
+            // Toggle navigation menu when button is clicked
+            if (navToggle) {
+                navToggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    navMenu.classList.toggle('show');
+                    console.log('Toggle clicked - menu is now:', navMenu.classList.contains('show') ? 'shown' : 'hidden');
+                });
+            } else {
+                console.error('Navigation toggle button not found');
+            }
+            
+            // Close menu when clicking elsewhere on the page
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('#nav') && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                }
+            });
+            
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
+</body>  
 </html>
