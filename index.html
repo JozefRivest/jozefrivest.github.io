@@ -56,6 +56,36 @@
       </ul>
     </nav>
 
+<!-- JavaScript for toggle functionality -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    // Toggle navigation menu when button is clicked
+    navToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('show');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInsideNav = navToggle.contains(event.target) || 
+                               navMenu.contains(event.target);
+      
+      if (!isClickInsideNav && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+      }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768 && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+      }
+    });
+  });
+</script>
+
 <!-- Home -->
   <article id="top" class="wrapper style1">
       <div class="profile-container">
