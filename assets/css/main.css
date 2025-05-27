@@ -430,3 +430,9 @@ body > article {
 #copyright a:hover {
   color: #777;
 }
+
+/* List */
+
+.pub.li {
+  margin: 15px 0;
+}
