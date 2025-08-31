@@ -77,7 +77,9 @@
               historical legacies such as wars, colonialism, and nation building
               shape the contemporary perspective of citizens toward the military
               and the state. I also study research methods, with a primary focus
-              on measurement and scaling techniques.
+              on measurement and scaling techniques. I also have published few
+              papers about the use of AI in social sciences, and their accuracy
+              in predicting and classifying political phenomenon.
             </p>
           </div>
         </div>
@@ -235,9 +237,48 @@
       </ul>
     </div>
 
+    <!-- Dark mode toggle button -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+
     <script>
+      // Dark mode functionality
+      function toggleDarkMode() {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update button icon
+        const toggleButton = document.getElementById('darkModeToggle');
+        const icon = toggleButton.querySelector('i');
+        icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+
+      // Initialize theme on page load
+      function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        const html = document.documentElement;
+        html.setAttribute('data-theme', savedTheme);
+        
+        // Update button icon
+        const toggleButton = document.getElementById('darkModeToggle');
+        const icon = toggleButton.querySelector('i');
+        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+
       // Updated JavaScript for your navigation toggle
       document.addEventListener("DOMContentLoaded", function () {
+        // Initialize theme
+        initializeTheme();
+        
+        // Add event listener for dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+        
         // Get the toggle button and navigation menu's UL element
         const navToggle = document.querySelector(".nav-toggle");
         const navMenu = document.querySelector("#nav ul.container");
