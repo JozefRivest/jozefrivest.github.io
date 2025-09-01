@@ -16,53 +16,67 @@
   <body class="is-preload">
     <!-- Nav -->
     <nav id="nav">
-      <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
-      <ul class="container">
-        <li><a href="#top">About</a></li>
-        <li><a href="#work">Research Areas</a></li>
-        <li><a href="#papers">Publications</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li class="social-nav">
-          <a href="mailto:jrivest@umich.edu" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </li>
-        <li class="social-nav">
-          <a
-            href="https://github.com/JozefRivest"
-            target="_blank"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="social-nav">
-          <a
-            href="https://www.linkedin.com/in/jozef-rivest-609146241"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-        <li class="social-nav">
-          <a
-            href="https://orcid.org/0000-0002-3195-3838"
-            target="_blank"
-            aria-label="ORCID"
-          >
-            <i class="fab fa-orcid"></i>
-          </a>
-        </li>
-      </ul>
+      <div class="na-container">
+        <button class="nav-toggle" aria-label="Toggle Navigation">☰</button>
+        <ul class="container">
+          <li><a href="#top">About</a></li>
+          <li><a href="#work">Research Areas</a></li>
+          <li><a href="#papers">Publications</a></li>
+          <li><a href="#cv">CV</a></li>
+          <li class="social-nav">
+            <a href="mailto:jrivest@umich.edu" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li class="social-nav">
+            <a
+              href="https://github.com/JozefRivest"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li class="social-nav">
+            <a
+              href="https://www.linkedin.com/in/jozef-rivest-609146241"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+          <li class="social-nav">
+            <a
+              href="https://orcid.org/0000-0002-3195-3838"
+              target="_blank"
+              aria-label="ORCID"
+            >
+              <i class="fab fa-orcid"></i>
+            </a>
+          </li>
+          <li><a href="index.html">FR</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Home -->
     <article id="top" class="wrapper style1">
       <div class="profile-container">
         <div class="profile-card">
-          <div class="image-container">
-            <img src="images/cerisier.JPG" alt="Cherry blossom in Hiroshima" />
+          <div class="cover-image-container">
+            <img
+              src="images/tokyo.jpeg"
+              alt="Sensoji at night"
+              class="cover-image"
+            />
+          </div>
+          <div class="profile-image-container">
+            <img
+              src="images/me.jpeg"
+              alt="Jozef Rivest"
+              class="profile-image"
+            />
           </div>
           <div class="content">
             <header>
@@ -102,7 +116,15 @@
             <section class="box style1">
               <span class="icon featured"> </span>
               <h3>Public Opinion</h3>
-              <p>
+              <p
+                style="
+                  font-size: 15pt;
+                  text-align: justify;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  hyphens: auto;
+                "
+              >
                 I am interested in the study of attitudes and social norms,
                 especially in a multilevel framework, especially subnational and
                 cross-national differences and similarities.
@@ -113,7 +135,15 @@
             <section class="box style1">
               <span class="icon featured"> </span>
               <h3>Comparative Politics</h3>
-              <p>
+              <p
+                style="
+                  font-size: 15pt;
+                  text-align: justify;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  hyphens: auto;
+                "
+              >
                 I study how historical legacies, such as wars, colonialism, and
                 state formation shape attitudes toward military institutions and
                 nationalism in a comparative fashion across Japan, South Korea,
@@ -125,7 +155,15 @@
             <section class="box style1">
               <span class="icon featured"> </span>
               <h3>International Relations</h3>
-              <p>
+              <p
+                style="
+                  font-size: 15pt;
+                  text-align: justify;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  hyphens: auto;
+                "
+              >
                 I am interested in how international events and geopolitical
                 factors contribute to shaping citizens' perspective on foreign
                 policy.
@@ -135,10 +173,21 @@
           <div class="col-4 col-6-medium col-12-small">
             <section class="box style1">
               <span class="icon featured"> </span>
-              <h3>Methodology</h3>
-              <p>
-                I am interested in scaling techniques, dimensional analyses, and
-                survey experiments.
+              <h3>Research Methods</h3>
+              <p
+                style="
+                  font-size: 15pt;
+                  text-align: justify;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  hyphens: auto;
+                "
+              >
+                I am interested in a vast array of research methods and their
+                implementation to uncover new answers to social and political
+                questions. I primarily focus on measurement and dimensional
+                analyses, but my interest goes well beyond psychometric methods
+                and design.
               </p>
             </section>
           </div>
@@ -156,7 +205,7 @@
             articles and conference papers please refer to my CV below.
           </p>
         </header>
-        <ul>
+        <ol reversed>
           <li class="pub li">
             Foisy, L.-O. M., Proulx, É., Cadieux, H., Gilbert, J., Rivest, J.,
             Bouillon, A., & Dufresne, Y. 2025. "Prompting the Machine:
@@ -177,7 +226,7 @@
               https://doi.org/10.1080/19331681.2024.2444587
             </a>
           </li>
-        </ul>
+        </ol>
       </div>
     </article>
 
@@ -191,7 +240,7 @@
         <div class="cv-viewer">
           <!-- PDF Viewer -->
           <iframe
-            src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/JozefRivest/cv_acad/main/CV_Rivest.pdf#pagemode=none&zoom=page-width"
+            src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/JozefRivest/cv_acad/main/cv_eng/CV_Rivest_en.pdf#pagemode=none&zoom=page-width"
             class="pdf-container"
             title="CV Viewer"
             aria-label="Academic CV Viewer"
@@ -238,7 +287,11 @@
     </div>
 
     <!-- Dark mode toggle button -->
-    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+    <button
+      class="dark-mode-toggle"
+      id="darkModeToggle"
+      aria-label="Toggle dark mode"
+    >
       <i class="fas fa-moon"></i>
     </button>
 
@@ -246,39 +299,39 @@
       // Dark mode functionality
       function toggleDarkMode() {
         const html = document.documentElement;
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        
+        const currentTheme = html.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+        html.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+
         // Update button icon
-        const toggleButton = document.getElementById('darkModeToggle');
-        const icon = toggleButton.querySelector('i');
-        icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        const toggleButton = document.getElementById("darkModeToggle");
+        const icon = toggleButton.querySelector("i");
+        icon.className = newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
       }
 
       // Initialize theme on page load
       function initializeTheme() {
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem("theme") || "light";
         const html = document.documentElement;
-        html.setAttribute('data-theme', savedTheme);
-        
+        html.setAttribute("data-theme", savedTheme);
+
         // Update button icon
-        const toggleButton = document.getElementById('darkModeToggle');
-        const icon = toggleButton.querySelector('i');
-        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        const toggleButton = document.getElementById("darkModeToggle");
+        const icon = toggleButton.querySelector("i");
+        icon.className = savedTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
       }
 
       // Updated JavaScript for your navigation toggle
       document.addEventListener("DOMContentLoaded", function () {
         // Initialize theme
         initializeTheme();
-        
+
         // Add event listener for dark mode toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        darkModeToggle.addEventListener('click', toggleDarkMode);
-        
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", toggleDarkMode);
+
         // Get the toggle button and navigation menu's UL element
         const navToggle = document.querySelector(".nav-toggle");
         const navMenu = document.querySelector("#nav ul.container");
